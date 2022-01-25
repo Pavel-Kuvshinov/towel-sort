@@ -25,6 +25,6 @@ module.exports = function towelSort (matrix) {
     */
 
     //My second decision
-
-    typeof(matrix) === 'undefined' ? [] : matrix.map((item, ind) => (ind % 2 === 0) ? item : item.reverse()).flat();
+    if (typeof(matrix) === 'undefined') return [];
+    return matrix.map((item, ind) => (ind % 2 === 0) ? item : item.reverse()).flat();
 }
